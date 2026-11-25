@@ -91,3 +91,4 @@ Fuentes institucionales consultadas el 25 de noviembre de 2026:
 - [Escuela Profesional de Computación — UCSP](https://dc.ucsp.edu.pe/pregrado/)
 
 El perfil profesional de LinkedIn del titular se encuentra enlazado desde la sección Perfil y desde Referencias.
+# web-personal-2nd-edition
