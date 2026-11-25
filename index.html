@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f" id="theme-color-meta">
+  <meta name="color-scheme" content="dark light">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('miguel-puma-theme');
+
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.dataset.theme = savedTheme;
+      } else {
+        document.documentElement.dataset.theme = 'light';
+      }
+    } catch (error) { /* El sitio funciona también si el almacenamiento está bloqueado. */ }
+  </script>
+  <meta name="description" content="Portafolio de Miguel Puma P., estudiante de Ciencia de la Computación y arreglista musical. Explora su formación, intereses y proyectos.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Miguel Puma P. — Sitio personal</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:title" content="Miguel Puma P. — Sitio personal">
+  <meta property="og:description" content="Estudiante de Ciencia de la Computación y arreglista musical. Formación, intereses y proyectos.">
+  <meta property="og:site_name" content="Miguel Puma P.">
+  <meta property="og:image" content="assets/images/foto.webp">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/foto.webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miguel Puma P.",
+    "description": "Estudiante de Ciencia de la Computación y arreglista musical. Sitio personal y portafolio.",
+    "image": "assets/images/foto.webp",
+    "sameAs": ["https://www.linkedin.com/in/miguel-puma-p-b33408435/"],
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidad Católica San Pablo",
+      "url": "https://ucsp.edu.pe/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Miguel Puma P., inicio">
+        <span class="brand-mark" aria-hidden="true">MP</span>
+        <span class="brand-name">Miguel Puma <span>P.</span></span>
+      </a>
+
+      <div class="header-actions">
+        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+          <a href="#perfil">Perfil</a>
+          <a href="#formacion">Formación</a>
+          <a href="#intereses">Intereses</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#enlaces">Enlaces</a>
+        </nav>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a tema claro" title="Cambiar a tema claro">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 2.5v2M12 19.5v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2.5 12h2m15 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.2 15.1A8.4 8.4 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="sr-only">Cambiar tema</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SITIO PERSONAL</p>
+          <h1 id="hero-title">Miguel Puma <span>P.</span></h1>
+          <p class="hero-role">Estudiante de Ciencia de la Computación · Arreglista musical</p>
+          <p class="hero-intro">Exploro la computación desde sus fundamentos y la música desde la composición, los arreglos y la producción digital.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#perfil">Conocer más <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-photo-wrap reveal">
+          <div class="hero-photo-frame">
+            <img class="hero-photo" src="assets/images/foto.webp" alt="Retrato personal de Miguel Puma P." width="900" height="936" fetchpriority="high" decoding="async">
+          </div>
+          <figcaption class="photo-caption">
+            <span>MIGUEL PUMA P.</span>
+            <span>CIENCIAS DE LA COMPUTACIÓN</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="hero-bottom container">
+        <span>PORTAFOLIO PERSONAL</span>
+        <a href="#perfil" aria-label="Desplazarse a la sección Perfil"><span class="scroll-line"></span> DESPLAZAR</a>
+      </div>
+    </section>
+
+    <section class="content-section container" id="perfil" aria-labelledby="perfil-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / PERFIL</p>
+        <h2 id="perfil-title">Aprender con intención.<br><em>Construir con propósito.</em></h2>
+      </div>
+      <div class="profile-layout">
+        <div class="profile-text reveal">
+          <p class="large-copy">Soy estudiante de Ciencia de la Computación en la Universidad Católica San Pablo y arreglista musical.</p>
+          <p>Me interesa comprender cómo funcionan los sistemas, transformar ideas en proyectos y explorar la relación entre tecnología, matemáticas y creatividad sonora. La computación me permite investigar y construir; la música, organizar ideas y darles forma a través de arreglos y producción digital.</p>
+          <p>Este sitio reúne parte de ese recorrido. Te invito a revisar la sección de <a class="inline-link" href="#intereses">intereses</a> para conocer los temas que me motivan y la sección de <a class="inline-link" href="#proyectos">proyectos</a> para ver algunas de mis exploraciones en programación, simulación y creación musical.</p>
+        </div>
+        <aside class="profile-note reveal" aria-label="Información académica">
+          <div class="note-top"><span class="note-dot"></span> ENFOQUE ACTUAL</div>
+          <div class="note-item">
+            <span class="note-label">FORMACIÓN</span>
+            <span class="note-value">Ciencias de la Computación</span>
+          </div>
+          <div class="note-item">
+            <span class="note-label">INSTITUCIÓN</span>
+            <span class="note-value">Universidad Católica San Pablo</span>
+          </div>
+          <div class="note-item">
+            <span class="note-label">PERFIL PROFESIONAL</span>
+            <a class="note-value note-link" href="https://www.linkedin.com/in/miguel-puma-p-b33408435/" target="_blank" rel="me noopener noreferrer">LinkedIn ↗</a>
+          </div>
+          <div class="note-item">
+            <span class="note-label">SITIO</span>
+            <span class="note-value">Portafolio personal</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="formation-section" id="formacion" aria-labelledby="formacion-title">
+      <div class="container">
+        <div class="section-heading section-heading-wide reveal">
+          <p class="eyebrow">02 / FORMACIÓN</p>
+          <h2 id="formacion-title">Conocimientos para<br><em>crear tecnología.</em></h2>
+          <p class="heading-aside">La carrera de Ciencia de la Computación de la UCSP combina fundamentos teóricos, matemáticos y prácticos. La universidad publica una malla curricular 2026; puedes consultar allí la secuencia completa de asignaturas, sus créditos y su organización.</p>
+        </div>
+
+        <div class="curriculum-panel reveal">
+          <div class="curriculum-panel-head">
+            <div>
+              <p class="project-category">PLAN CURRICULAR · UCSP</p>
+              <h3>Malla curricular 2026</h3>
+              <p>Documento oficial publicado por la Universidad Católica San Pablo.</p>
+            </div>
+            <a class="button button-primary curriculum-button" href="https://ucsp.edu.pe/vive-san-pablo/universidad/transparencia/malla-curricular-programa-estudios-ciencia-computacion/?tab=2026" target="_blank" rel="noopener noreferrer">Consultar malla oficial <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="curriculum-embed-wrap">
+            <iframe class="curriculum-embed" src="https://drive.google.com/file/d/1gwTZFfIFj6kG-SyOhgv9w-S3Cp1xyOYK/preview" title="Malla curricular 2026 de Ciencia de la Computación de la UCSP" loading="lazy" allow="autoplay"></iframe>
+          </div>
+          <p class="curriculum-source">Fuente: portal de Transparencia de la UCSP. La universidad mantiene allí la versión vigente y las versiones anteriores.</p>
+        </div>
+
+        <div class="areas-block">
+          <div class="subsection-heading reveal">
+            <p class="eyebrow">ÁREAS DE FORMACIÓN</p>
+            <h3>Campos que atraviesan la carrera</h3>
+            <p>El Departamento de Computación destaca las siguientes áreas dentro de su enfoque académico:</p>
+          </div>
+          <div class="area-grid">
+            <article class="area-card reveal"><span>01</span><h4>Fundamentos de computación</h4><p>Principios para modelar problemas y construir soluciones computacionales.</p></article>
+            <article class="area-card reveal"><span>02</span><h4>Algoritmos y complejidad</h4><p>Diseño de procedimientos y análisis de su eficiencia.</p></article>
+            <article class="area-card reveal"><span>03</span><h4>Matemática computacional</h4><p>Herramientas matemáticas para analizar y resolver problemas.</p></article>
+            <article class="area-card reveal"><span>04</span><h4>Inteligencia artificial</h4><p>Modelos y métodos que permiten aprender patrones y automatizar tareas.</p></article>
+            <article class="area-card reveal"><span>05</span><h4>Ciencia de datos</h4><p>Preparación, análisis e interpretación de información.</p></article>
+            <article class="area-card reveal"><span>06</span><h4>Visión computacional</h4><p>Técnicas para extraer información de imágenes y video.</p></article>
+            <article class="area-card reveal"><span>07</span><h4>Gráficos y visualización</h4><p>Representación visual de datos, modelos y escenas.</p></article>
+            <article class="area-card reveal"><span>08</span><h4>Ciberseguridad</h4><p>Protección de sistemas, información y servicios digitales.</p></article>
+          </div>
+        </div>
+
+        <div class="faculty-block">
+          <div class="subsection-heading reveal">
+            <p class="eyebrow">DOCENTES E INVESTIGADORES</p>
+            <h3>Personas detrás de la formación</h3>
+            <p>Una selección de integrantes del Departamento de Computación. Los enlaces llevan a perfiles públicos de LinkedIn; sus líneas de trabajo se describen según el directorio institucional. La asignación de docentes a cada curso puede variar por semestre.</p>
+          </div>
+          <div class="faculty-grid">
+            <article class="faculty-card reveal">
+              <p class="faculty-role">DOCENTE · INVESTIGACIÓN</p>
+              <h4>Christian Jorge Delgado Polar</h4>
+              <p>Inteligencia artificial y sistemas multiagente.</p>
+              <a href="https://pe.linkedin.com/in/christian-jorge-delgado-polar-51b1b925" target="_blank" rel="noopener noreferrer">Ver LinkedIn <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="faculty-card reveal">
+              <p class="faculty-role">DOCENTE · INVESTIGACIÓN</p>
+              <h4>Julissa Giuliana Villanueva Llerena</h4>
+              <p>Inteligencia artificial, aprendizaje de máquina, modelos probabilísticos y procesamiento de lenguaje natural.</p>
+              <a href="https://pe.linkedin.com/in/julissa-villanueva-llerena" target="_blank" rel="noopener noreferrer">Ver LinkedIn <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="faculty-card reveal">
+              <p class="faculty-role">DOCENTE · INVESTIGACIÓN</p>
+              <h4>Daniel Alexis Gutiérrez Pachas</h4>
+              <p>Ciencia de datos, optimización y modelamiento estocástico.</p>
+              <a href="https://pe.linkedin.com/in/daniel-alexis-gutierrez-pachas-7938b2135" target="_blank" rel="noopener noreferrer">Ver LinkedIn <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="faculty-card reveal">
+              <p class="faculty-role">DOCENTE · INVESTIGACIÓN</p>
+              <h4>Yván Jesús Túpac Valdivia</h4>
+              <p>Bioinformática.</p>
+              <a href="https://pe.linkedin.com/in/yvantv" target="_blank" rel="noopener noreferrer">Ver LinkedIn <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="faculty-card reveal">
+              <p class="faculty-role">DOCENTE · INVESTIGACIÓN</p>
+              <h4>Regina Paola Ticona Herrera</h4>
+              <p>Web semántica, bases de datos e interacción humano-computador.</p>
+              <a href="https://fr.linkedin.com/in/regina-paola-ticona-herrera-10528a48" target="_blank" rel="noopener noreferrer">Ver LinkedIn <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <a class="faculty-directory" href="https://dc.ucsp.edu.pe/staff/" target="_blank" rel="noopener noreferrer">Consultar el directorio oficial del Departamento de Computación <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="interests-section" id="intereses" aria-labelledby="intereses-title">
+      <div class="container">
+        <div class="section-heading section-heading-wide reveal">
+          <p class="eyebrow">03 / INTERESES</p>
+          <h2 id="intereses-title">Ideas que pueden<br><em>definir el futuro.</em></h2>
+          <p class="heading-aside">La inteligencia artificial, los nuevos paradigmas de cómputo y los sistemas autónomos amplían las posibilidades de la ciencia y la tecnología. Comprenderlos hoy permite imaginar y construir las herramientas del mañana.</p>
+        </div>
+        <div class="interest-grid">
+          <article class="interest-card reveal">
+            <span class="interest-number">01</span>
+            <div class="interest-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 5.5a6 6 0 0 0-5.8 4.5A5.5 5.5 0 0 0 8.5 20.7V23a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2.3A5.5 5.5 0 0 0 21.8 10 6 6 0 0 0 16 5.5Z" stroke="currentColor" stroke-width="1.4"/><path d="M12 14h8M12.5 18h7M13 25v2m6-2v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Inteligencia artificial</h3>
+            <p>Permitirá crear sistemas capaces de reconocer patrones, apoyar decisiones y automatizar tareas complejas en campos como la ciencia, la industria y la salud.</p>
+          </article>
+          <article class="interest-card reveal">
+            <span class="interest-number">02</span>
+            <div class="interest-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="2.2" stroke="currentColor" stroke-width="1.4"/><ellipse cx="16" cy="16" rx="12" ry="5.5" stroke="currentColor" stroke-width="1.3" transform="rotate(35 16 16)"/><ellipse cx="16" cy="16" rx="12" ry="5.5" stroke="currentColor" stroke-width="1.3" transform="rotate(-35 16 16)"/><circle cx="25.6" cy="9.2" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <h3>Computación cuántica</h3>
+            <p>Podría abrir nuevas vías para simular materiales y abordar ciertos problemas especializados difíciles para los equipos clásicos; será un complemento, no un reemplazo universal.</p>
+          </article>
+          <article class="interest-card reveal">
+            <span class="interest-number">03</span>
+            <div class="interest-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><rect x="7" y="10" width="18" height="15" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M16 5v5M12 17h.01M20 17h.01M12 21h8M4 15h3m18 0h3M11 25v3m10-3v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="16" cy="5" r="1.2" fill="currentColor"/></svg>
+            </div>
+            <h3>Robótica</h3>
+            <p>Integrará sensores, control, mecánica e inteligencia artificial para que las máquinas interactúen con su entorno y realicen tareas de precisión, asistencia y exploración.</p>
+          </article>
+          <article class="interest-card reveal">
+            <span class="interest-number">04</span>
+            <div class="interest-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M3.5 16h4l3-8 5 16 4-12 3 4h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 27.5h24" stroke="currentColor" stroke-width="1" opacity=".55"/></svg>
+            </div>
+            <h3>Computación analógica</h3>
+            <p>El uso de señales y magnitudes físicas continuas puede ofrecer enfoques eficientes para simulaciones, procesamiento de señales y determinados problemas de optimización.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <div class="section-heading projects-heading reveal">
+          <p class="eyebrow">04 / PROYECTOS</p>
+          <h2 id="proyectos-title">Experimentos e ideas<br><em>hechos realidad.</em></h2>
+          <p class="projects-intro">Una selección de trabajos y exploraciones que conectan programación, matemáticas, ciencia y creación musical.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-media project-media-lorenz">
+              <img src="assets/images/caos-lorenz.webp" alt="Visualización del atractor de Lorenz generado por un simulador de caos determinista" width="1500" height="1118" loading="lazy" decoding="async">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">SIMULACIÓN · SISTEMAS DINÁMICOS</p>
+              <h3>Caos de Lorenz</h3>
+              <p>Simulador visual del sistema de Lorenz, desarrollado con PyQt6 y VisPy, para observar trayectorias y explorar la sensibilidad a las condiciones iniciales.</p>
+              <div class="project-tags"><span>Python</span><span>PyQt6</span><span>VisPy</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media project-media-primes">
+              <img src="assets/images/generador-primos.webp" alt="Salida de terminal con una secuencia extensa de dígitos generada por el proyecto de números primos" width="1800" height="1112" loading="lazy" decoding="async">
+              <span class="project-index">02</span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">MATEMÁTICAS · PROGRAMACIÓN</p>
+              <h3>Generador de primos gigantes</h3>
+              <p>Exploración de la generación computacional de números primos de gran tamaño y la representación de resultados numéricos de longitud extensa.</p>
+              <div class="project-tags"><span>Aritmética</span><span>Algoritmos</span><span>Números grandes</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media project-media-logic">
+              <img src="assets/images/logic-pro-arreglos.webp" alt="Arreglo musical multipista en Logic Pro con regiones MIDI e instrumentos virtuales" width="1800" height="992" loading="lazy" decoding="async">
+              <span class="project-index">03</span>
+            </div>
+            <div class="project-body">
+              <p class="project-category">MÚSICA · PRODUCCIÓN DIGITAL</p>
+              <h3>Arreglos con Logic Pro</h3>
+              <p>Composición y organización de arreglos musicales mediante varias pistas e instrumentos virtuales, combinando patrones rítmicos y líneas melódicas.</p>
+              <div class="project-tags"><span>Logic Pro</span><span>MIDI</span><span>Composición</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section links-section container" id="enlaces" aria-labelledby="enlaces-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / REFERENCIAS</p>
+        <h2 id="enlaces-title">Conexiones<br><em>académicas.</em></h2>
+      </div>
+      <p class="links-intro reveal">Instituciones y referencias relacionadas con mi entorno de formación.</p>
+      <div class="link-list">
+        <a class="external-card reveal" href="https://www.linkedin.com/in/miguel-puma-p-b33408435/" target="_blank" rel="me noopener noreferrer">
+          <span class="external-index">01</span>
+          <span class="external-main">
+            <span class="external-title">Mi perfil de LinkedIn</span>
+            <span class="external-description">Perfil profesional y trayectoria académica</span>
+          </span>
+          <span class="external-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="external-card reveal" href="https://dc.ucsp.edu.pe/staff/" target="_blank" rel="noopener noreferrer">
+          <span class="external-index">02</span>
+          <span class="external-main">
+            <span class="external-title">Docentes del Departamento de Computación</span>
+            <span class="external-description">Directorio institucional y líneas de investigación</span>
+          </span>
+          <span class="external-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="external-card reveal" href="https://ucsp.edu.pe/vive-san-pablo/universidad/transparencia/malla-curricular-programa-estudios-ciencia-computacion/?tab=2026" target="_blank" rel="noopener noreferrer">
+          <span class="external-index">03</span>
+          <span class="external-main">
+            <span class="external-title">Malla curricular 2026</span>
+            <span class="external-description">Documento oficial de Ciencia de la Computación</span>
+          </span>
+          <span class="external-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="external-card reveal" href="https://dc.ucsp.edu.pe/pregrado/ciencia-computacion/" target="_blank" rel="noopener noreferrer">
+          <span class="external-index">04</span>
+          <span class="external-main">
+            <span class="external-title">Ciencia de la Computación · UCSP</span>
+            <span class="external-description">Presentación de la carrera y perfil de egreso</span>
+          </span>
+          <span class="external-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="next-section" aria-labelledby="next-title">
+      <div class="container next-inner reveal">
+        <div>
+          <p class="eyebrow">06 / EVOLUCIÓN</p>
+          <h2 id="next-title">El recorrido<br><em>continúa.</em></h2>
+        </div>
+        <p class="next-copy">Este portafolio seguirá creciendo con nuevos desarrollos, aprendizajes y experimentos. Cada proyecto será una oportunidad para explorar otras ideas y llevarlas un paso más allá.</p>
+        <span class="next-mark" aria-hidden="true">MP<span>—</span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#inicio">Miguel Puma <span>P.</span></a>
+      <p>Un sitio personal en constante construcción.</p>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Miguel Puma P.</span>
+        <a href="#inicio">VOLVER ARRIBA ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
